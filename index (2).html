@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Happy Birthday Oguntimehin Alex</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==========================================
+           GLOBAL & CSS VARIABLES
+        ========================================== */
+        
+        :root {
+            --navy-deep: #0a1128;
+            --blue-royal: #1c2541;
+            --blue-card: rgba(10, 17, 40, 0.75);
+            --blue-card-border: rgba(0, 240, 255, 0.35);
+            --cyan-glow: #00f0ff;
+            --blue-soft: #b0c4de;
+            --text-light: #f8fafc;
+            --gold-accent: #ffd700;
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+            --font-script: 'Great Vibes', cursive;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100dvh;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(rgba(10, 17, 40, 0.65), rgba(5, 12, 30, 0.75)), 
+                        url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            font-size: 0.88rem;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* ==========================================
+           PAGE CONTAINER & ANIMATIONS
+        ========================================== */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 90px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .page-view {
+            display: none;
+            flex: 1;
+            padding: 1.2rem 0.8rem 2rem 0.8rem;
+            max-width: 760px;
+            width: 100%;
+            margin: 0 auto;
+            min-height: calc(100dvh - 90px);
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .page-view.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ==========================================
+           CENTRALIZED GLASS CARD CONTAINER
+        ========================================== */
+        .glass-card {
+            background: var(--blue-card);
+            border: 1px solid var(--blue-card-border);
+            border-radius: 20px;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            padding: 1.2rem 1rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 240, 255, 0.15);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* ==========================================
+           COMMON COMPONENTS & BUTTONS
+        ========================================== */
+        .section-header {
+            text-align: center;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--cyan-glow);
+            text-transform: uppercase;
+            font-size: 0.65rem;
+            letter-spacing: 1.8px;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .section-title {
+            font-family: var(--font-title);
+            font-size: clamp(1.3rem, 5vw, 2rem);
+            color: #fff;
+            margin-bottom: 0.4rem;
+            line-height: 1.25;
+        }
+
+        .section-subtitle {
+            color: var(--blue-soft);
+            font-size: clamp(0.78rem, 3.2vw, 0.92rem);
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.45;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00f0ff 0%, #0072ff 100%);
+            color: #000;
+            font-weight: 700;
+            padding: 0.65rem 1.2rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.4);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-top: 1rem;
+            font-family: var(--font-body);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.7);
+        }
+
+        /* ==========================================
+           FIXED BOTTOM NAVIGATION DOCK
+        ========================================== */
+        .bottom-nav-dock {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(8, 14, 30, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--blue-card-border);
+            padding: 0.5rem 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.6);
+            width: 100%;
+        }
+
+        .nav-btn {
+            background: rgba(0, 240, 255, 0.1);
+            border: 1px solid var(--cyan-glow);
+            color: var(--cyan-glow);
+            padding: 0.45rem 0.75rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            white-space: nowrap;
+            font-family: var(--font-body);
+            flex-shrink: 0;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: var(--cyan-glow);
+            color: #000;
+            box-shadow: 0 0 12px rgba(0, 240, 255, 0.6);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            border-color: var(--blue-soft);
+            color: var(--blue-soft);
+            background: transparent;
+        }
+
+        .nav-center-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.15rem;
+            flex: 1;
+            min-width: 0;
+            text-align: center;
+        }
+
+        .page-title-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-light);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+
+        .page-dots {
+            display: flex;
+            gap: 0.2rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--cyan-glow);
+            width: 10px;
+            border-radius: 6px;
+            box-shadow: 0 0 6px var(--cyan-glow);
+        }
+
+        /* ==========================================
+           PAGE 1 & 2: HERO & MILESTONES
+        ========================================== */
+        .hero-banner {
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-title {
+            font-family: var(--font-title);
+            font-size: clamp(1.6rem, 6vw, 2.6rem);
+            background: linear-gradient(135deg, #ffffff 0%, #00f0ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.8rem;
+            line-height: 1.2;
+        }
+
+        .hero-designer-badge {
+            display: inline-block;
+            background: rgba(0, 240, 255, 0.12);
+            border: 1px solid var(--cyan-glow);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: var(--cyan-glow);
+            font-size: 0.78rem;
+            margin-bottom: 0.8rem;
+            font-family: var(--font-body);
+        }
+
+        .milestone-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 0.6rem;
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .milestone-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--cyan-glow);
+            padding: 0.9rem 0.5rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .milestone-num {
+            font-size: clamp(1.5rem, 6vw, 2.3rem);
+            font-weight: 800;
+            color: var(--cyan-glow);
+            font-family: var(--font-title);
+            margin-bottom: 0.1rem;
+        }
+
+        .milestone-label {
+            color: var(--blue-soft);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ==========================================
+           PAGE 3: CHAPTER INDEX / NAV MATRIX
+        ========================================== */
+        .nav-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 0.6rem;
+            width: 100%;
+        }
+
+        .matrix-card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 0.75rem 0.6rem;
+            text-align: left;
+        }
+
+        .matrix-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--cyan-glow);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+
+        .matrix-card h3 {
+            color: var(--cyan-glow);
+            margin-bottom: 0.25rem;
+            font-size: 0.8rem;
+        }
+
+        .matrix-card p {
+            font-size: 0.72rem;
+            color: var(--blue-soft);
+            line-height: 1.35;
+        }
+
+        /* ==========================================
+           PAGE 4 & 5: ENVELOPE & LETTER
+        ========================================== */
+        .envelope-card {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 1.8rem 1rem;
+        }
+
+        .envelope-icon {
+            font-size: 2.6rem;
+            margin-bottom: 0.6rem;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        .letter-container {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: left;
+            line-height: 1.6;
+            color: #e2e8f0;
+            font-size: 0.85rem;
+        }
+
+        .signature {
+            font-family: var(--font-script);
+            font-size: 1.4rem;
+            color: var(--cyan-glow);
+            text-align: right;
+            margin-top: 1rem;
+            line-height: 1.1;
+        }
+
+        /* ==========================================
+           PAGE 6 & 13: TEXT BOXES & ACKNOWLEDGMENT
+        ========================================== */
+        .intro-box, .acknowledgment-box {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================
+           PAGE 7: 202 REASONS VAULT
+        ========================================== */
+        .vault-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 140px;
+            background: rgba(10, 17, 40, 0.7);
+            border: 1px solid var(--blue-card-border);
+            border-radius: 20px;
+            padding: 0.45rem 0.8rem;
+            color: #fff;
+            font-size: 0.78rem;
+            outline: none;
+            font-family: var(--font-body);
+        }
+
+        .search-input:focus {
+            border-color: var(--cyan-glow);
+            box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 0.5rem;
+            max-height: 48vh;
+            overflow-y: auto;
+            padding-right: 0.2rem;
+            scrollbar-width: thin;
+            width: 100%;
+        }
+
+        .reason-card {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0.65rem 0.5rem;
+            text-align: left;
+            transition: all 0.25s ease;
+        }
+
+        .reason-card:hover {
+            border-color: var(--cyan-glow);
+            transform: translateY(-2px);
+        }
+
+        .reason-num {
+            color: var(--cyan-glow);
+            font-weight: 700;
+            font-size: 0.72rem;
+            margin-bottom: 0.15rem;
+        }
+
+        /* ==========================================
+           PAGE 8 & 9: STORMS TIMELINE
+        ========================================== */
+        .storm-spotlight {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.6;
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================
+           PAGE 10: PET NAMES 3D FLIP
+        ========================================== */
+        .pet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+            gap: 0.5rem;
+            width: 100%;
+            max-height: 48vh;
+            overflow-y: auto;
+            padding-right: 0.2rem;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            height: 75px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.4rem;
+            word-break: break-word;
+        }
+
+        .flip-card-front {
+            background: rgba(28, 37, 65, 0.75);
+            border: 1px solid var(--blue-card-border);
+            color: var(--cyan-glow);
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(135deg, #00f0ff 0%, #0072ff 100%);
+            color: #000;
+            font-weight: 700;
+            font-size: 0.75rem;
+            transform: rotateY(180deg);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+        }
+
+        /* ==========================================
+           PAGE 11: SLIDESHOW & MEDIA PLAYER
+        ========================================== */
+        .slideshow-container {
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .slide-frame {
+            position: relative;
+            width: 100%;
+            height: 230px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--blue-card-border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-img, .slide-video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: none;
+        }
+
+        .slide-img.active, .slide-video.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .video-controls {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--blue-card-border);
+            border-radius: 25px;
+            padding: 0.4rem 0.8rem;
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .control-btn {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .control-btn:hover { color: var(--cyan-glow); }
+
+        .slide-counter {
+            font-size: 0.72rem;
+            color: var(--blue-soft);
+        }
+
+        .music-indicator {
+            font-size: 0.72rem;
+            color: var(--cyan-glow);
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+        }
+
+        /* ==========================================
+           PAGE 12: JOVIAL SPIRIT
+        ========================================== */
+        .jovial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.6rem;
+            width: 100%;
+        }
+
+        /* ==========================================
+           RESPONSIVE MOBILE BREAKPOINTS
+        ========================================== */
+        @media (max-width: 480px) {
+            .page-view { padding: 0.8rem 0.4rem 1.6rem 0.4rem; }
+            .glass-card { padding: 1rem 0.75rem; border-radius: 16px; }
+            .slide-frame { height: 200px; }
+            .bottom-nav-dock { padding: 0.4rem 0.4rem; }
+            .nav-btn { padding: 0.35rem 0.6rem; font-size: 0.72rem; }
+            .page-dots { display: none; }
+            .video-controls { justify-content: center; }
+            .pet-grid { grid-template-columns: repeat(auto-fill, minmax(85px, 1fr)); }
+            .reasons-grid { grid-template-columns: 1fr; }
+            .flip-card { height: 70px; }
+            .flip-card-front, .flip-card-back { font-size: 0.72rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BACKGROUND AUDIO PLAYER -->
+    <audio id="bgMusic" src="runningtoyou.mp3" loop preload="auto"></audio>
+
+    <!-- MAIN MULTI-PAGE CONTENT -->
+    <main class="main-content">
+
+        <!-- PAGE 1: WELCOME & HERO -->
+        <section id="page-1" class="page-view active">
+            <div class="glass-card hero-banner">
+                <div class="hero-designer-badge">
+                    ✨ With Love from <span style="font-family: var(--font-script); font-size: 1.4rem; vertical-align: middle;">Osuloye Peculiar</span>
+                </div>
+                <h1 class="hero-title">Happy Birthday, Oguntimehin Alex!</h1>
+                <p class="section-subtitle">Celebrating your special day, your amazing soul, and our beautiful journey together.</p>
+                <button class="btn-primary" onclick="switchPage(2)">Begin Our Journey ➔</button>
+            </div>
+        </section>
+
+        <!-- PAGE 2: OUR MILESTONES -->
+        <section id="page-2" class="page-view">
+            <div class="glass-card">
+                <div class="section-header">
+                    <span class="section-tag">Our Journey In Numbers</span>
+                    <h2 class="section-title">Milestones Of Love</h2>
+                    <p class="section-subtitle">Every single day spent with you is worth celebrating.</p>
+                </div>
+
+                <div class="milestone-box">
+                    <div class="milestone-card">
+                        <div class="milestone-num">202</div>
+                        <div class="milestone-label">Days Together</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="milestone-num">7</div>
+                        <div class="milestone-label">Months of Love</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="milestone-num">Sept 17</div>
+                        <div class="milestone-label">Special Birthday</div>
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="switchPage(3)">View Chapter Index ➔</button>
+            </div>
+        </section>
+
+        <!-- PAGE 3: CHAPTER INDEX / NAV MATRIX -->
+        <section id="page-3" class="page-view">
+            <div class="glass-card">
+                <div class="section-header">
+                    <span class="section-tag">Explore Your Website</span>
+                    <h2 class="section-title">Birthday Pages Index</h2>
+                </div>
+
+                <div class="nav-matrix">
+                    <div class="glass-card matrix-card" onclick="switchPage(4)">
+                        <h3>💌 Birthday Love Letter</h3>
+                        <p>Click to see the letter I wrote for you.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(6)">
+                        <h3>💡 Why 202 Reasons</h3>
+                        <p>The meaning behind 202 reasons.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(7)">
+                        <h3>💙 202 Reasons Vault</h3>
+                        <p>Browse or search all 202 distinct reasons.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(8)">
+                        <h3>🌧️ Storms We Weathered</h3>
+                        <p>A tribute to choosing each other always.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(10)">
+                        <h3>🔐 Pet Names Vault</h3>
+                        <p>Flip open 30 special nicknames.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(11)">
+                        <h3>📸 Memory Slideshow</h3>
+                        <p>Watch 10 special picture & video moments.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(12)">
+                        <h3>😊 Your Jovial Spirit</h3>
+                        <p>Celebrating your humor and social charm.</p>
+                    </div>
+                    <div class="glass-card matrix-card" onclick="switchPage(13)">
+                        <h3>♾️ Forever Promise</h3>
+                        <p>Final acknowledgment from Peculiar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 4: UNSEAL THE ENVELOPE -->
+        <section id="page-4" class="page-view">
+            <div class="glass-card envelope-card" onclick="switchPage(5)">
+                <div class="section-header">
+                    <span class="section-tag">Birthday Note</span>
+                    <h2 class="section-title">A Sealed Message For You Babe</h2>
+                </div>
+                <div class="envelope-icon">✉️</div>
+                <h3 style="color: var(--cyan-glow); margin-bottom: 0.3rem; font-size: 0.95rem;">Click to Unseal Letter</h3>
+                <p style="color: var(--blue-soft); font-size: 0.78rem;">Sealed with love by your baby girl</p>
+            </div>
+        </section>
+
+        <!-- PAGE 5: THE BIRTHDAY LETTER -->
+        <section id="page-5" class="page-view">
+            <div class="glass-card letter-container">
+                <div class="section-header">
+                    <span class="section-tag">Unsealed Letter</span>
+                    <h2 class="section-title">My Letter To You</h2>
+                </div>
+
+                <p><strong>My Dearest Alex,</strong></p><br>
+                <p>Happy Birthday to the most incredible boy in my life! Today, September 17th, is all about celebrating you—your kind heart, your strength, and the immense joy you bring into my world every single day.</p><br>
+                <p>Over these 202 days and 7 months together, you have shown me what true love, care, and genuine companionship feel like. You make me feel cherished, protected, and deeply loved.</p><br>
+                <p>May this new year bring you limitless blessings, success in all your endeavors, and happiness beyond measure. I am so grateful to walk this journey beside you.</p>
+                
+                <div class="signature">
+                    With all my love,<br>
+                    Osuloye Peculiar
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 6: 202 REASONS PRELUDE -->
+        <section id="page-6" class="page-view">
+            <div class="glass-card intro-box">
+                <div class="section-header">
+                    <span class="section-tag">The Prelude</span>
+                    <h2 class="section-title">The Meaning Behind 202 Reasons</h2>
+                </div>
+
+                <p style="margin-bottom: 0.8rem;">
+                    People often ask why love is measured in moments, words, or actions. For us, every single day spent together has been a revelation.
+                </p>
+                <p style="margin-bottom: 0.8rem;">
+                    Over these past <strong>202 Days (7 Months)</strong>, loving you hasn't been a static feeling—it has been a daily realization. For every day we have shared since our journey began, I have discovered a distinct reason why you hold my heart.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    202 days with 202 unique reasons, each representing a specific reason why I love you, Alex.
+                </p>
+                <button class="btn-primary" onclick="switchPage(7)">Explore All 202 Reasons ➔</button>
+            </div>
+        </section>
+
+        <!-- PAGE 7: 202 REASONS VAULT -->
+        <section id="page-7" class="page-view">
+            <div class="glass-card">
+                <div class="section-header">
+                    <span class="section-tag">Love Vault</span>
+                    <h2 class="section-title">202 Reasons Why I Love You</h2>
+                    <p class="section-subtitle">Search, browse, or click "Surprise Me!" to pick a random reason.</p>
+                </div>
+
+                <div class="vault-controls">
+                    <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search reasons..." oninput="filterReasons()">
+                    <button class="btn-primary" style="margin-top: 0; padding: 0.45rem 0.8rem;" onclick="randomReason()">🎲 Surprise Me!</button>
+                </div>
+
+                <div id="reasonsGrid" class="reasons-grid">
+                    <!-- Populated directly from the allReasons array -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 8: STORMS WE WEATHERED (PART 1) -->
+        <section id="page-8" class="page-view">
+            <div class="glass-card storm-spotlight">
+                <div class="section-header">
+                    <span class="section-tag">Our Strength • Part 1</span>
+                    <h2 class="section-title">Storms We Weathered</h2>
+                    <p class="section-subtitle">Understanding & Real Moments</p>
+                </div>
+
+                <h3 style="color: var(--cyan-glow); margin-bottom: 0.6rem; font-family: var(--font-title); font-size: 1.1rem;">🌩️ Real Moments & Deep Understanding</h3>
+                <p style="margin-bottom: 0.8rem;">
+                    No real relationship is without its testing times. Over our 202 days together, we faced misunderstandings and tough conversations.
+                </p>
+                <p style="margin-bottom: 0.8rem;">
+                    Yet, each storm did not push us apart—it only refined us, deepened our communication, and brought us closer than ever before.
+                </p>
+
+                <button class="btn-primary" onclick="switchPage(9)">Part 2: Choosing Us ➔</button>
+            </div>
+        </section>
+
+        <!-- PAGE 9: STORMS WE WEATHERED (PART 2) -->
+        <section id="page-9" class="page-view">
+            <div class="glass-card storm-spotlight">
+                <div class="section-header">
+                    <span class="section-tag">Our Strength • Part 2</span>
+                    <h2 class="section-title">Always Choosing Each Other</h2>
+                    <p class="section-subtitle">Patience, Forgiveness & Loyalty</p>
+                </div>
+
+                <h3 style="color: var(--cyan-glow); margin-bottom: 0.6rem; font-family: var(--font-title); font-size: 1.1rem;">🤝 Patience & Unwavering Choice</h3>
+                <p style="margin-bottom: 0.8rem;">
+                    We learned that choosing each other means listening with empathy, letting go of pride, and replacing frustration with patience and deep forgiveness.
+                </p>
+                <p>
+                    No matter how hard a day felt, our conclusion remained unchanged: we choose each other yesterday, today, and forever.
+                </p>
+            </div>
+        </section>
+
+        <!-- PAGE 10: PET NAMES VAULT -->
+        <section id="page-10" class="page-view">
+            <div class="glass-card">
+                <div class="section-header">
+                    <span class="section-tag">Interactive Nicknames</span>
+                    <h2 class="section-title">The Pet Names Vault</h2>
+                    <p class="section-subtitle">Click any vault card to flip and reveal the pet name!</p>
+                </div>
+
+                <div id="petGrid" class="pet-grid">
+                    <!-- 30 Flip Cards generated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 11: MEMORY SLIDESHOW PLAYER -->
+        <section id="page-11" class="page-view">
+            <div class="glass-card slideshow-container">
+                <div class="section-header">
+                    <span class="section-tag">Memories & Music</span>
+                    <h2 class="section-title">10-Media Slideshow Player</h2>
+                    <p class="section-subtitle">A lot of memories in pictures & Videos</p>
+                </div>
+
+                <div class="slide-frame">
+                    <img id="activeSlideImg" class="slide-img" src="" alt="Alex & Peculiar Photo Memory">
+                    <video id="activeSlideVideo" class="slide-video" src="" autoplay loop muted playsinline></video>
+                </div>
+
+                <div class="video-controls">
+                    <button class="control-btn" onclick="prevSlide()">⏮️</button>
+                    <button id="playPauseBtn" class="btn-primary" style="margin-top:0; padding: 0.35rem 0.8rem;" onclick="toggleSlideshow()">▶️ Play</button>
+                    <button class="control-btn" onclick="nextSlide()">⏭️</button>
+                    <div class="slide-counter">Media <span id="slideIndex">1</span> / 10</div>
+                    <div class="music-indicator">🎵 <span id="musicStatus">Music Off</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 12: JOVIAL SPIRIT & CHARM -->
+        <section id="page-12" class="page-view">
+            <div class="glass-card">
+                <div class="section-header">
+                    <span class="section-tag">Personality Spotlight</span>
+                    <h2 class="section-title">Your Jovial Spirit & Social Charm</h2>
+                    <p class="section-subtitle">Celebrating your humor, warmth, and infectious positive energy.</p>
+                </div>
+
+                <div class="jovial-grid">
+                    <div class="glass-card" style="padding: 0.8rem;">
+                        <h3 style="color: var(--cyan-glow); margin-bottom: 0.3rem; font-size: 0.85rem;">Humor & Joy</h3>
+                        <p style="font-size: 0.78rem;">You have an extraordinary talent for lighting up any room you step into. Your jokes and warm laughs bring instant comfort.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 0.8rem;">
+                        <h3 style="color: var(--cyan-glow); margin-bottom: 0.3rem; font-size: 0.85rem;">Warmth with People</h3>
+                        <p style="font-size: 0.78rem;">You relate with people so effortlessly. Your kindness, respect, and welcoming aura make everyone feel appreciated.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 0.8rem;">
+                        <h3 style="color: var(--cyan-glow); margin-bottom: 0.3rem; font-size: 0.85rem;">My Daily Sunshine</h3>
+                        <p style="font-size: 0.78rem;">Even on quiet or busy days, your jovial nature turns ordinary moments into unforgettable memories that I hold dear.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 13: FINAL ACKNOWLEDGMENT -->
+        <section id="page-13" class="page-view">
+            <div class="glass-card acknowledgment-box">
+                <div class="section-header">
+                    <span class="section-tag">Forever Vow</span>
+                    <h2 class="section-title">Final Acknowledgment & Promise</h2>
+                </div>
+
+                <p style="font-size: 0.92rem; color: var(--cyan-glow); margin-bottom: 0.6rem;">
+                    <strong>To My Dearest Alex,</strong>
+                </p>
+                <p style="margin-bottom: 0.8rem;">
+                    As we celebrate your birthday and reflect on our 202 days (7 months) together, I want you to know that this is only the beginning. 
+                </p>
+                <p style="margin-bottom: 0.8rem;">
+                    I promise to keep loving you non-stop, supporting your dreams, standing by you through every high and low, and cherishing the wonderful man that you are.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    Thank you for being my peace, my joy, and my best friend. Happy Birthday, my love!
+                </p>
+
+                <div class="signature">
+                    With non-stop love,<br>
+                    Osuloye Peculiar
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FIXED BOTTOM SLIDER & NAVIGATION DOCK -->
+    <div class="bottom-nav-dock">
+        <button id="prevBtn" class="nav-btn" onclick="prevPage()">
+            <span>←</span> Prev
+        </button>
+
+        <div class="nav-center-info">
+            <span id="pageBadge" class="page-title-badge">1. Welcome</span>
+            <div class="page-dots" id="dotsContainer">
+                <!-- Generated dynamically -->
+            </div>
+        </div>
+
+        <button id="nextBtn" class="nav-btn" onclick="nextPage()">
+            Next <span>→</span>
+        </button>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const totalPages = 13;
+        let currentPage = 1;
+
+        const pageTitles = [
+            "1. Welcome",
+            "2. Our Milestones",
+            "3. Chapter Index",
+            "4. Unseal Envelope",
+            "5. Birthday Letter",
+            "6. Why 202 Reasons?",
+            "7. Reasons Vault",
+            "8. Storms We Weathered",
+            "9. Choosing Each Other",
+            "10. Pet Names Vault",
+            "11. Memory Slideshow",
+            "12. Your Jovial Spirit",
+            "13. Forever Promise"
+        ];
+
+        /* ==========================================
+           1. INITIALIZATION & NAVIGATION CONTROLS
+        ========================================== */
+        function initDots() {
+            const container = document.getElementById('dotsContainer');
+            container.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const dot = document.createElement('div');
+                dot.className = `dot ${i === 1 ? 'active' : ''}`;
+                dot.onclick = () => switchPage(i);
+                container.appendChild(dot);
+            }
+        }
+
+        function switchPage(pageNumber) {
+            if (pageNumber < 1 || pageNumber > totalPages) return;
+            currentPage = pageNumber;
+
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-view');
+            pages.forEach(p => p.classList.remove('active'));
+
+            // Show target page
+            const targetPage = document.getElementById(`page-${pageNumber}`);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+
+            // Update bottom dock controls
+            document.getElementById('pageBadge').innerText = pageTitles[currentPage - 1];
+            document.getElementById('prevBtn').disabled = (currentPage === 1);
+            document.getElementById('nextBtn').disabled = (currentPage === totalPages);
+
+            // Update dot indicators
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentPage - 1);
+            });
+
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Update slideshow if opening Page 11
+            if (pageNumber === 11) {
+                updateSlideUI();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                switchPage(currentPage + 1);
+            }
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                switchPage(currentPage - 1);
+            }
+        }
+
+        // Keyboard arrow key navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextPage();
+            if (e.key === 'ArrowLeft') prevPage();
+        });
+
+        /* ==========================================
+           2. PAGE 7: 202 UNIQUE REASONS ARRAY
+           (Add/Replace your own 202 reasons here)
+        ========================================== */
+        const allReasons = [
+            { id: 1, text: "Reason #1: The way you make me feel like you are my forever." },
+{ id: 2, text: "Reason #2: Your smile that brightens even my darkest days." },
+{ id: 3, text: "Reason #3: Your laugh that feels like home to me." },
+{ id: 4, text: "Reason #4: Your beautiful eyes that speak without words." },
+{ id: 5, text: "Reason #5: The way you look at me like I truly matter." },
+{ id: 6, text: "Reason #6: Your voice that brings me peace instantly." },
+{ id: 7, text: "Reason #7: Your sense of humor that always catches me off guard." },
+{ id: 8, text: "Reason #8: Your kindness that flows naturally from you." },
+{ id: 9, text: "Reason #9: Your personality that I can never get tired of." },
+{ id: 10, text: "Reason #10: Your confidence that inspires me." },
+{ id: 11, text: "Reason #11: Your honesty even when it’s not easy." },
+{ id: 12, text: "Reason #12: The way you talk so effortlessly and naturally." },
+{ id: 13, text: "Reason #13: The way you listen with real attention." },
+{ id: 14, text: "Reason #14: How you make me feel without saying a word." },
+{ id: 15, text: "Reason #15: Your presence that feels comforting." },
+{ id: 16, text: "Reason #16: Your energy that fills any space you enter." },
+{ id: 17, text: "Reason #17: Your warmth that feels like safety." },
+{ id: 18, text: "Reason #18: Your intelligence that amazes me." },
+{ id: 19, text: "Reason #19: Your creativity in everything you do." },
+{ id: 20, text: "Reason #20: Your patience with me and others." },
+{ id: 21, text: "Reason #21: Your empathy that shows how deeply you care." },
+{ id: 22, text: "Reason #22: The way you care for people around you." },
+{ id: 23, text: "Reason #23: The way you truly understand me." },
+{ id: 24, text: "Reason #24: Your loyalty that never wavers." },
+{ id: 25, text: "Reason #25: Your strength in hard times." },
+{ id: 26, text: "Reason #26: Your softness that balances your strength." },
+{ id: 27, text: "Reason #27: Your passion for what you love." },
+{ id: 28, text: "Reason #28: Your dreams that push you forward." },
+{ id: 29, text: "Reason #29: Your goals that show your focus." },
+{ id: 30, text: "Reason #30: Your ambition that motivates me too." },
+{ id: 31, text: "Reason #31: Your calm nature that soothes me." },
+{ id: 32, text: "Reason #32: Your excitement that is contagious." },
+{ id: 33, text: "Reason #33: Your curiosity about life." },
+{ id: 34, text: "Reason #34: Your courage when things get hard." },
+{ id: 35, text: "Reason #35: Your shy smile that melts me." },
+{ id: 36, text: "Reason #36: Your happy smile that lights everything up." },
+{ id: 37, text: "Reason #37: Your sincerity in everything you do." },
+{ id: 38, text: "Reason #38: Your respect for people and feelings." },
+{ id: 39, text: "Reason #39: Your openness with your emotions." },
+{ id: 40, text: "Reason #40: Your uniqueness that no one can replace." },
+{ id: 41, text: "Reason #41: The way you make me laugh without trying." },
+{ id: 42, text: "Reason #42: The way you cheer me up instantly." },
+{ id: 43, text: "Reason #43: The way you motivate me to keep going." },
+{ id: 44, text: "Reason #44: The way you inspire me to grow." },
+{ id: 45, text: "Reason #45: The way you surprise me in small ways." },
+{ id: 46, text: "Reason #46: The way you care for others deeply." },
+{ id: 47, text: "Reason #47: Your heart that is pure and genuine." },
+{ id: 48, text: "Reason #48: Your soul that feels beautiful." },
+{ id: 49, text: "Reason #49: Your vibe that feels like home." },
+{ id: 50, text: "Reason #50: Your authenticity that never feels fake." },
+{ id: 51, text: "Reason #51: The way you make everything feel better." },
+{ id: 52, text: "Reason #52: The way you make time feel different." },
+{ id: 53, text: "Reason #53: The way you change my mood instantly." },
+{ id: 54, text: "Reason #54: The way you make me smile without trying." },
+{ id: 55, text: "Reason #55: The way you make me feel safe." },
+{ id: 56, text: "Reason #56: The way you make me feel seen." },
+{ id: 57, text: "Reason #57: The way you make me feel heard." },
+{ id: 58, text: "Reason #58: The way you make me feel valued." },
+{ id: 59, text: "Reason #59: The way you make me feel special." },
+{ id: 60, text: "Reason #60: The way you make me feel understood." },
+{ id: 61, text: "Reason #61: Your kindness to strangers." },
+{ id: 62, text: "Reason #62: Your thoughtfulness in small things." },
+{ id: 63, text: "Reason #63: Your generosity that comes naturally." },
+{ id: 64, text: "Reason #64: Your strength in difficult moments." },
+{ id: 65, text: "Reason #65: Your care for details I never notice." },
+{ id: 66, text: "Reason #66: Your gentle side that softens everything." },
+{ id: 67, text: "Reason #67: Your playful side that makes life fun." },
+{ id: 68, text: "Reason #68: Your serious side when needed." },
+{ id: 69, text: "Reason #69: The way you remember small things about me." },
+{ id: 70, text: "Reason #70: The way you notice details others miss." },
+{ id: 71, text: "Reason #71: The way you react to my happiness." },
+{ id: 72, text: "Reason #72: The way you react to my sadness." },
+{ id: 73, text: "Reason #73: The way you react to my fears." },
+{ id: 74, text: "Reason #74: The way you stay true to yourself." },
+{ id: 75, text: "Reason #75: The way you stay strong even when tired." },
+{ id: 76, text: "Reason #76: The way you stay kind no matter what." },
+{ id: 77, text: "Reason #77: The way you stay honest in every situation." },
+{ id: 78, text: "Reason #78: The way you stay real and grounded." },
+{ id: 79, text: "Reason #79: The way you make moments special." },
+{ id: 80, text: "Reason #80: The way you make memories unforgettable." },
+{ id: 81, text: "Reason #81: The way you make ordinary days better." },
+{ id: 82, text: "Reason #82: The way you make silence comfortable." },
+{ id: 83, text: "Reason #83: The way you make conversations meaningful." },
+{ id: 84, text: "Reason #84: The way you make me feel calm." },
+{ id: 85, text: "Reason #85: The way you make me feel excited." },
+{ id: 86, text: "Reason #86: The way you make me feel hopeful." },
+{ id: 87, text: "Reason #87: The way you make me feel alive." },
+{ id: 88, text: "Reason #88: Your morning smile that starts my day." },
+{ id: 89, text: "Reason #89: Your presence at night that ends my day peacefully." },
+{ id: 90, text: "Reason #90: Your calm voice when I’m stressed." },
+{ id: 91, text: "Reason #91: Your excited voice when you’re happy." },
+{ id: 92, text: "Reason #92: Your caring words when I need them." },
+{ id: 93, text: "Reason #93: Your comforting words when I’m down." },
+{ id: 94, text: "Reason #94: Your supportive words when I’m unsure." },
+{ id: 95, text: "Reason #95: Your encouraging words when I feel weak." },
+{ id: 96, text: "Reason #96: Your loving words that stay with me." },
+{ id: 97, text: "Reason #97: The way you react to my jokes." },
+{ id: 98, text: "Reason #98: The way you react to my silence." },
+{ id: 99, text: "Reason #99: The way you react to my dreams." },
+{ id: 100, text: "Reason #100: The way you react to my stories." },
+{ id: 101, text: "Reason #101: The way you react to me with real attention." },
+{ id: 102, text: "Reason #102: Your presence in my thoughts." },
+{ id: 103, text: "Reason #103: Your place in my heart." },
+{ id: 104, text: "Reason #104: Your importance in my life." },
+{ id: 105, text: "Reason #105: Your impact on my happiness." },
+{ id: 106, text: "Reason #106: Your influence on my days." },
+{ id: 107, text: "Reason #107: Your role in my smiles." },
+{ id: 108, text: "Reason #108: Your role in my dreams." },
+{ id: 109, text: "Reason #109: Your role in my heart." },
+{ id: 110, text: "Reason #110: The way you make time fly." },
+{ id: 111, text: "Reason #111: The way you make moments matter." },
+{ id: 112, text: "Reason #112: The way you make love feel real." },
+{ id: 113, text: "Reason #113: The way you make me believe again." },
+{ id: 114, text: "Reason #114: The way you make me trust again." },
+{ id: 115, text: "Reason #115: The way you make me hope again." },
+{ id: 116, text: "Reason #116: The way you make me dream again." },
+{ id: 117, text: "Reason #117: The way you make me feel alive again." },
+{ id: 118, text: "Reason #118: The way you make me laugh again." },
+{ id: 119, text: "Reason #119: The way you make me smile again." },
+{ id: 120, text: "Reason #120: Your smile that stays in my mind." },
+{ id: 121, text: "Reason #121: Your laugh that stays in my thoughts." },
+{ id: 122, text: "Reason #122: Your voice that I replay in my head." },
+{ id: 123, text: "Reason #123: Your words that never leave me." },
+{ id: 124, text: "Reason #124: Your actions that mean everything." },
+{ id: 125, text: "Reason #125: Your care that touches my heart." },
+{ id: 126, text: "Reason #126: Your love that feels real." },
+{ id: 127, text: "Reason #127: Your presence that feels right." },
+{ id: 128, text: "Reason #128: Your energy that feels warm." },
+{ id: 129, text: "Reason #129: The way you make me forget my worries." },
+{ id: 130, text: "Reason #130: The way you make me feel peaceful." },
+{ id: 131, text: "Reason #131: The way you make me feel appreciated." },
+{ id: 132, text: "Reason #132: The way you make me feel respected." },
+{ id: 133, text: "Reason #133: The way you make me feel complete." },
+{ id: 134, text: "Reason #134: Your honesty in every situation." },
+{ id: 135, text: "Reason #135: Your loyalty in relationships." },
+{ id: 136, text: "Reason #136: Your faith in good things." },
+{ id: 137, text: "Reason #137: Your belief in kindness." },
+{ id: 138, text: "Reason #138: Your belief in love." },
+{ id: 139, text: "Reason #139: Your belief in me." },
+{ id: 140, text: "Reason #140: The way you make me smile at my phone." },
+{ id: 141, text: "Reason #141: The way you make my heart race." },
+{ id: 142, text: "Reason #142: The way you make me nervous in a good way." },
+{ id: 143, text: "Reason #143: The way you make me excited just by existing." },
+{ id: 144, text: "Reason #144: The way you make me happy for no reason." },
+{ id: 145, text: "Reason #145: The way you make me calm instantly." },
+{ id: 146, text: "Reason #146: The way you make me brave." },
+{ id: 147, text: "Reason #147: The way you make me strong." },
+{ id: 148, text: "Reason #148: The way you make me feel loved." },
+{ id: 149, text: "Reason #149: The way you make me feel enough." },
+{ id: 150, text: "Reason #150: The way you make me feel whole." },
+{ id: 151, text: "Reason #151: Your smile that means everything to me." },
+{ id: 152, text: "Reason #152: Your laugh that I never get tired of." },
+{ id: 153, text: "Reason #153: Your voice that comforts my heart." },
+{ id: 154, text: "Reason #154: Your words that stay with me forever." },
+{ id: 155, text: "Reason #155: Your actions that show real love." },
+{ id: 156, text: "Reason #156: Your honesty that builds trust." },
+{ id: 157, text: "Reason #157: Your kindness that warms my heart." },
+{ id: 158, text: "Reason #158: Your love that feels safe." },
+{ id: 159, text: "Reason #159: Your presence that changes everything." },
+{ id: 160, text: "Reason #160: Your heart that feels like home." },
+{ id: 161, text: "Reason #161: The way you make me feel lucky." },
+{ id: 162, text: "Reason #162: The way you make me feel grateful." },
+{ id: 163, text: "Reason #163: The way you make me feel alive." },
+{ id: 164, text: "Reason #164: The way you make me feel safe." },
+{ id: 165, text: "Reason #165: The way you make me feel strong." },
+{ id: 166, text: "Reason #166: The way you make me feel brave." },
+{ id: 167, text: "Reason #167: The way you make me feel valued." },
+{ id: 168, text: "Reason #168: The way you make me feel respected." },
+{ id: 169, text: "Reason #169: The way you make me feel loved." },
+{ id: 170, text: "Reason #170: The way you make me feel enough." },
+{ id: 171, text: "Reason #171: Your presence in small moments." },
+{ id: 172, text: "Reason #172: Your presence in big moments." },
+{ id: 173, text: "Reason #173: Your presence in silence." },
+{ id: 174, text: "Reason #174: Your presence in laughter." },
+{ id: 175, text: "Reason #175: Your presence in my thoughts." },
+{ id: 176, text: "Reason #176: Your presence in my dreams." },
+{ id: 177, text: "Reason #177: Your presence in my heart." },
+{ id: 178, text: "Reason #178: Your presence in my life." },
+{ id: 179, text: "Reason #179: Your presence in my happiness." },
+{ id: 180, text: "Reason #180: The way you make love feel simple and real." },
+{ id: 181, text: "Reason #181: The way you make love feel easy and natural." },
+{ id: 182, text: "Reason #182: The way you make even silence feel comfortable." },
+{ id: 183, text: "Reason #183: The way you stay with me even in my worst moments." },
+{ id: 184, text: "Reason #184: The way you never make me feel like a burden." },
+{ id: 185, text: "Reason #185: The way you accept every part of me." },
+{ id: 186, text: "Reason #186: The way you never try to change who I am." },
+{ id: 187, text: "Reason #187: The way you inspire me to grow into a better person." },
+{ id: 188, text: "Reason #188: The way you challenge me gently without hurting me." },
+{ id: 189, text: "Reason #189: The way you support my dreams like they are yours." },
+{ id: 190, text: "Reason #190: The way you believe in me even when I doubt myself." },
+{ id: 191, text: "Reason #191: The way you care for me without being asked." },
+{ id: 192, text: "Reason #192: The way you always notice when I’m not okay." },
+{ id: 193, text: "Reason #193: The way you try your best to understand me." },
+{ id: 194, text: "Reason #194: The way you never give up on us." },
+{ id: 195, text: "Reason #195: The way you put effort into our relationship." },
+{ id: 196, text: "Reason #196: The way you make me feel like I matter." },
+{ id: 197, text: "Reason #197: The way you make me feel like I belong." },
+{ id: 198, text: "Reason #198: The way you make me feel like I’m enough." },
+{ id: 199, text: "Reason #199: The way you make me feel chosen every day." },
+{ id: 200, text: "Reason #200: The way you make me feel like your priority." },
+{ id: 201, text: "Reason #201: The way you bring peace to my chaos." },
+{ id: 202, text: "Reason #202: The way you make my heart feel at home." }
+        ];
+
+        function renderReasons(list) {
+            const grid = document.getElementById('reasonsGrid');
+            grid.innerHTML = '';
+            list.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'reason-card';
+                card.innerHTML = `
+                    <div class="reason-num">#${item.id}</div>
+                    <p style="font-size:0.78rem; color:#e2e8f0;">${item.text}</p>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterReasons() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allReasons.filter(r => r.text.toLowerCase().includes(query));
+            renderReasons(filtered);
+        }
+
+        function randomReason() {
+            if (allReasons.length === 0) return;
+            const randomIndex = Math.floor(Math.random() * allReasons.length);
+            const selected = allReasons[randomIndex];
+            alert(`🎲 Surprise Reason #${selected.id}:\n\n"${selected.text}"`);
+        }
+
+        /* ==========================================
+           3. PAGE 10: 30 PET NAMES VAULT (3D FLIP)
+        ========================================== */
+        const petNames = [
+             "My love 🥰❤️", "my charming prince 😘💖", "my sunshine ☀️❤️", "my sweet boy 🥹💗", "my favorite person 🫶💞", "my best friend 🥰💓", "my heartbeat 💘💓", "my partner 💕🥰", "my better half 💖🫂", "my other half 🥹❤️", "my No 1 🥰🏆", "my charmstone💎❤️", "my sweetheart 😘💗", "my handsome boy 😌❤️", "my king 👑💖", "my prince charming 🥰👑", "my treasure 💎💕", "my comfort  🥹❤️", "my safe place 🫂💗", "my favorite human 😭❤️", "my darling 🥰💞", "my baby❤️😘", "my lovie🥹💗", "my dream boy 💭❤️", "my forever 🥰♾️", "my gentleman 😌❤️", "my special one 💖🥹", "my crush🥰❤️", "Alexiee 💕😘", "my everything ❤️🥹"
+        ];
+
+        function initPetNames() {
+            const petGrid = document.getElementById('petGrid');
+            petGrid.innerHTML = '';
+            petNames.forEach((name, index) => {
+                const card = document.createElement('div');
+                card.className = 'flip-card';
+                card.onclick = function() { this.classList.toggle('flipped'); };
+                card.innerHTML = `
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Vault #${index + 1}</div>
+                        <div class="flip-card-back">${name}</div>
+                    </div>
+                `;
+                petGrid.appendChild(card);
+            });
+        }
+
+        /* ==========================================
+           4. PAGE 11: SLIDESHOW & AUDIO ENGINE
+        ========================================== */
+        let currentSlide = 1;
+        let isPlaying = false;
+        let slideshowInterval = null;
+
+        const CONSTANT_SLIDE_DURATION_MS = 3000;
+
+        const alexMediaList = [
+            { name: "Alex1", type: "image", src: "Alex1.jpg" },
+            { name: "Alex2", type: "image", src: "Alex2.jpg" },
+            { name: "Alex3", type: "image", src: "Alex3.jpg" },
+            { name: "Alex4", type: "video", src: "Alex4.mp4", startTime: 4 },
+            { name: "Alex5", type: "video", src: "Alex5.mp4", startTime: 4 },
+            { name: "Alex6", type: "image", src: "Alex6.jpg" },
+            { name: "Alex7", type: "image", src: "Alex7.jpg" },
+            { name: "Alex8", type: "video", src: "Alex8.mp4", startTime: 4 },
+            { name: "Alex9", type: "video", src: "Alex9.mp4", startTime: 4 },
+            { name: "Alex10", type: "image", src: "Alex10.jpg" }
+        ];
+
+        function updateSlideUI() {
+            document.getElementById('slideIndex').innerText = currentSlide;
+            
+            const activeImg = document.getElementById('activeSlideImg');
+            const activeVideo = document.getElementById('activeSlideVideo');
+            const media = alexMediaList[currentSlide - 1];
+
+            if (media.type === 'video') {
+                activeImg.style.display = 'none';
+                activeImg.classList.remove('active');
+
+                activeVideo.style.display = 'block';
+                activeVideo.classList.add('active');
+                activeVideo.muted = true;
+
+                if (!activeVideo.src.includes(media.src)) {
+                    activeVideo.src = media.src;
+                }
+
+                const startSec = media.startTime || 0;
+
+                const playVideoSnippet = () => {
+                    activeVideo.currentTime = startSec;
+                    activeVideo.play().catch(err => console.log('Video playback error:', err));
+                };
+
+                if (activeVideo.readyState >= 1) {
+                    playVideoSnippet();
+                } else {
+                    activeVideo.onloadedmetadata = function() {
+                        playVideoSnippet();
+                        activeVideo.onloadedmetadata = null;
+                    };
+                }
+            } else {
+                activeVideo.pause();
+                activeVideo.style.display = 'none';
+                activeVideo.classList.remove('active');
+
+                activeImg.src = media.src;
+                activeImg.style.display = 'block';
+                activeImg.classList.add('active');
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = currentSlide >= 10 ? 1 : currentSlide + 1;
+            updateSlideUI();
+        }
+
+        function prevSlide() {
+            currentSlide = currentSlide <= 1 ? 10 : currentSlide - 1;
+            updateSlideUI();
+        }
+
+        function startSoftMusic() {
+            const audio = document.getElementById('bgMusic');
+            audio.play().then(() => {
+                document.getElementById('musicStatus').innerText = 'Playing Running To You';
+            }).catch(err => {
+                console.log('Audio playback notice:', err);
+                document.getElementById('musicStatus').innerText = 'Audio Blocked (Click Play)';
+            });
+        }
+
+        function stopSoftMusic() {
+            const audio = document.getElementById('bgMusic');
+            audio.pause();
+            document.getElementById('musicStatus').innerText = 'Music Stopped';
+        }
+
+        function toggleSlideshow() {
+            const btn = document.getElementById('playPauseBtn');
+            if (!isPlaying) {
+                isPlaying = true;
+                btn.innerText = '⏸️ Stop';
+                slideshowInterval = setInterval(nextSlide, CONSTANT_SLIDE_DURATION_MS);
+                startSoftMusic();
+            } else {
+                isPlaying = false;
+                btn.innerText = '▶️ Play';
+                clearInterval(slideshowInterval);
+                stopSoftMusic();
+            }
+        }
+
+        // Initialize application on load
+        window.onload = function() {
+            initDots();
+            renderReasons(allReasons);
+            initPetNames();
+            switchPage(1);
+        };
+    </script>
+</body>
+</html>
